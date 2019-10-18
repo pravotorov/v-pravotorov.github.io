@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <section class="sidebar">
+        <button id="sideButton" class="red">In Progress</button>
+        <button id="sideButton" class="green">To Do</button>
+        <button id="sideButton" class="gray">Deferred</button>
+
+    </section>
+    <section class="search">
+        <form class="search-form">
+            <input input id="search-input" name="todoSearch" type="textarea" placeholder="Search...">
+            <input id="inputSearch" type="button" value=" " title="Отменить поиск">
+        </form>
+    </section>
+
+    <section class="wrapper">
+        <div id="listTodo" class="todos">
+            <div class="item">
+                <input class="lef-bl" type="checkbox">
+                <p class="p-text">Take a screenshot</p>
+                <button class="delete"></button>
+            </div>
+            <div class="item">
+                <input class="lef-bl" type="checkbox">
+                <p class="p-text">Upload on github</p>
+                <button class="delete"></button>
+            </div>
+            <div class="item">
+                <input class="lef-bl" type="checkbox">
+                <p class="p-text">Write a report</p>
+                <button class="delete"></button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="add-bl">
+        <form class="add-todo-form">
+            <input id="inp" name="todoInput" type="text" placeholder="Add New Item">
+            <input id="buttonColor" name="color" type="radio" class="red">
+            <input id="buttonColor" name="color" type="radio" class="green">
+            <input id="buttonColor" name="color" type="radio" class="gray">
+            <button class="cl"></button>
+        </form>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
