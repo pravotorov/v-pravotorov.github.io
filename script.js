@@ -8,7 +8,6 @@ const formSearch = document.querySelector('.search-form');
 const search = document.querySelector('#search-input');
 
 
-
 sidebar.addEventListener('click', (e) => changeTodo(e.target))
 
 //Find out the color of the bu
@@ -21,7 +20,6 @@ function changeTodo(item) {
         case 'gray':
             changeTodoColor('#9b9b9b9d');
             break;
-
         case 'red':
             changeTodoColor('#ff00009d');
             break;
@@ -37,7 +35,6 @@ function changeTodoColor(color) {
         listCheckbox[i].checked = false;
     });
 }
-
 
 search.addEventListener('keyup', () => searchElements());
 
@@ -57,8 +54,14 @@ function searchElements() {
 }
 
 // Clear field Search form
-buttonSearchStop.addEventListener('click', () => formSearch.todoSearch.value = "");
+buttonSearchStop.addEventListener('click', () => clickDelete());
 
+//Delete by button
+function clickDelete()
+{
+    formSearch.todoSearch.value = "";
+    searchElements();
+}
 
 listTodo.addEventListener('click', (e) => deleteTodo(e.target));
 
